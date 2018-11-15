@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CellActions.cs](./CS/SpreadsheetControl_WPF_Examples/SpreadsheetActions/CellActions.cs) (VB: [CellActions.vb](./VB/SpreadsheetControl_WPF_Examples/SpreadsheetActions/CellActions.vb))
+* [RowAndColumnActions.cs](./CS/SpreadsheetControl_WPF_Examples/SpreadsheetActions/RowAndColumnActions.cs) (VB: [RowAndColumnActions.vb](./VB/SpreadsheetControl_WPF_Examples/SpreadsheetActions/RowAndColumnActions.vb))
+<!-- default file list end -->
 # WPF SpreadsheetControl examples
 
 
