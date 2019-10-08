@@ -21,7 +21,7 @@ namespace SpreadsheetControl_WPF_Examples
                 Worksheet worksheet = control.Document.Worksheets.ActiveWorksheet;
 
                 // Access the cell range that is currently visible.
-                Range visibleRange = control.VisibleRange;
+                CellRange visibleRange = control.VisibleRange;
                 //Range visibleRange = control.Document.Range.FromLTRB(10, 15, 15, 20);
 
                 // Freeze the top visible row.
@@ -43,7 +43,7 @@ namespace SpreadsheetControl_WPF_Examples
                 Worksheet worksheet = control.Document.Worksheets.ActiveWorksheet;
 
                 // Access the cell range that is currently visible.
-                Range visibleRange = control.VisibleRange;
+                CellRange visibleRange = control.VisibleRange;
 
 
                 // Freeze the top visible row.
@@ -63,7 +63,7 @@ namespace SpreadsheetControl_WPF_Examples
             Worksheet worksheet = control.Document.Worksheets.ActiveWorksheet;
 
             // Access the cell range that is currently visible.
-            Range visibleRange = control.VisibleRange;
+            CellRange visibleRange = control.VisibleRange;
 
             // Access the active cell. 
             Cell activeCell = control.ActiveCell;
@@ -110,7 +110,7 @@ namespace SpreadsheetControl_WPF_Examples
                 Worksheet worksheet = control.Document.Worksheets.ActiveWorksheet;
 
                 // Access the cell range that is currently visible.
-                Range visibleRange = control.VisibleRange;
+                CellRange visibleRange = control.VisibleRange;
 
                 // Freeze the top visible row.
                 worksheet.FreezeRows(0, visibleRange);

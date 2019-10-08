@@ -22,12 +22,12 @@ Namespace SpreadsheetControl_WPF_Examples
 				'Access the active worksheet.
 				Dim worksheet As Worksheet = control.Document.Worksheets.ActiveWorksheet
 
-				' Access the cell range that is currently visible.
-				Dim visibleRange As Range = control.VisibleRange
-				'Range visibleRange = control.Document.Range.FromLTRB(10, 15, 15, 20);
+                ' Access the cell range that is currently visible.
+                Dim visibleRange As CellRange = control.VisibleRange
+                'Range visibleRange = control.Document.Range.FromLTRB(10, 15, 15, 20);
 
-				' Freeze the top visible row.
-				worksheet.FreezeRows(0, visibleRange)
+                ' Freeze the top visible row.
+                worksheet.FreezeRows(0, visibleRange)
 			Finally
 				control.EndUpdate()
 			End Try
@@ -41,12 +41,12 @@ Namespace SpreadsheetControl_WPF_Examples
 				'Access the active worksheet.
 				Dim worksheet As Worksheet = control.Document.Worksheets.ActiveWorksheet
 
-				' Access the cell range that is currently visible.
-				Dim visibleRange As Range = control.VisibleRange
+                ' Access the cell range that is currently visible.
+                Dim visibleRange As CellRange = control.VisibleRange
 
 
-				' Freeze the top visible row.
-				worksheet.FreezeColumns(0, visibleRange)
+                ' Freeze the top visible row.
+                worksheet.FreezeColumns(0, visibleRange)
 			Finally
 				control.EndUpdate()
 			End Try
@@ -58,11 +58,11 @@ Namespace SpreadsheetControl_WPF_Examples
 			'Access the active worksheet.
 			Dim worksheet As Worksheet = control.Document.Worksheets.ActiveWorksheet
 
-			' Access the cell range that is currently visible.
-			Dim visibleRange As Range = control.VisibleRange
+            ' Access the cell range that is currently visible.
+            Dim visibleRange As CellRange = control.VisibleRange
 
-			' Access the active cell. 
-			Dim activeCell As Cell = control.ActiveCell
+            ' Access the active cell. 
+            Dim activeCell As Cell = control.ActiveCell
 
 			Dim rowOffset As Integer = activeCell.RowIndex - visibleRange.TopRowIndex - 1
 			Dim columnOffset As Integer = activeCell.ColumnIndex - visibleRange.LeftColumnIndex - 1
@@ -99,11 +99,11 @@ Namespace SpreadsheetControl_WPF_Examples
 				'Access the active worksheet.
 				Dim worksheet As Worksheet = control.Document.Worksheets.ActiveWorksheet
 
-				' Access the cell range that is currently visible.
-				Dim visibleRange As Range = control.VisibleRange
+                ' Access the cell range that is currently visible.
+                Dim visibleRange As CellRange = control.VisibleRange
 
-				' Freeze the top visible row.
-				worksheet.FreezeRows(0, visibleRange)
+                ' Freeze the top visible row.
+                worksheet.FreezeRows(0, visibleRange)
 			Finally
 				control.EndUpdate()
 			End Try

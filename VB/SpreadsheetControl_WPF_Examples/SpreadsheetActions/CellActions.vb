@@ -17,10 +17,10 @@ Namespace SpreadsheetControl_WPF_Examples
             control.BeginUpdate()
             Try
                 control.SelectedCell.FillColor = Color.LightGray
-                Dim c As Range = control.SelectedCell
+                Dim c As CellRange = control.SelectedCell
                 c.FillColor = Color.Blue
 
-                Dim currentSelection As Range = control.Selection
+                Dim currentSelection As CellRange = control.Selection
                 Dim rangeFormatting As Formatting = currentSelection.BeginUpdateFormatting()
                 rangeFormatting.Borders.SetOutsideBorders(DevExpress.Utils.DXColor.Green, BorderLineStyle.MediumDashDot)
                 currentSelection.EndUpdateFormatting(rangeFormatting)
@@ -35,10 +35,10 @@ Namespace SpreadsheetControl_WPF_Examples
             control.BeginUpdate()
             Try
                 Dim worksheet As Worksheet = control.Document.Worksheets.ActiveWorksheet
-                Dim r1 As Range = worksheet.Range("A1:B10")
-                Dim r2 As Range = worksheet.Range("E12")
-                Dim r3 As Range = worksheet.Range("D4:E7")
-                Dim rlist As New List(Of Range)() From {r1, r2, r3}
+                Dim r1 As CellRange = worksheet.Range("A1:B10")
+                Dim r2 As CellRange = worksheet.Range("E12")
+                Dim r3 As CellRange = worksheet.Range("D4:E7")
+                Dim rlist As New List(Of CellRange)() From {r1, r2, r3}
                 control.SetSelectedRanges(rlist)
 
                 control.SelectedCell = worksheet.Cells("E5")
