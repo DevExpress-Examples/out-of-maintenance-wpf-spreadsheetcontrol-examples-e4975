@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports DevExpress.Spreadsheet
+﻿Imports DevExpress.Spreadsheet
 Imports DevExpress.Xpf.NavBar
 Imports DevExpress.Xpf.Spreadsheet
 Imports System
@@ -24,6 +23,7 @@ Namespace SpreadsheetControl_WPF_Examples
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		'IWorkbook workbook;
 
 		Public Sub New()
@@ -36,7 +36,7 @@ Namespace SpreadsheetControl_WPF_Examples
 		End Sub
 
 		Private Sub NavigationPaneView_MouseDoubleClick(ByVal sender As Object, ByVal e As MouseButtonEventArgs)
-			Dim item As NavBarItem = (CType(sender, NavBarViewBase)).GetNavBarItem(e)
+			Dim item As NavBarItem = DirectCast(sender, NavBarViewBase).GetNavBarItem(e)
 			If item IsNot Nothing Then
 				Dim example As SpreadsheetExample = TryCast(item.Content, SpreadsheetExample)
 				If example IsNot Nothing Then
